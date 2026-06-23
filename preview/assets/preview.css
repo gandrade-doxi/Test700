@@ -1,10 +1,12 @@
 :root {
-	--background: #f7f7f5;
-	--surface: #ffffff;
-	--text: #1d2327;
-	--muted: #667085;
-	--accent: #3858e9;
-	--border: #dcdcde;
+	--background: #edf8ef;
+	--surface: #f8fff9;
+	--text: #0f2f1c;
+	--muted: #4c745c;
+	--accent: #15803d;
+	--accent-dark: #0f5132;
+	--accent-soft: #d9fbe1;
+	--border: #b9dfc3;
 	--content-width: 1120px;
 }
 
@@ -66,9 +68,27 @@ a {
 	text-decoration: none;
 }
 
+.site-nav {
+	align-items: center;
+	display: flex;
+	gap: 20px;
+}
+
+.site-nav a {
+	color: var(--accent-dark);
+	font-size: 0.95rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+	color: var(--accent);
+}
+
 .hero {
-	background: #101828;
-	color: #fff;
+	background: var(--accent-dark);
+	color: var(--surface);
 	padding-block: clamp(72px, 12vw, 150px);
 }
 
@@ -77,20 +97,20 @@ a {
 }
 
 .hero h1 {
-	font-size: clamp(2.75rem, 8vw, 6rem);
-	letter-spacing: -0.055em;
+	font-size: 3rem;
+	letter-spacing: 0;
 	line-height: 0.98;
 	margin: 0 0 24px;
 }
 
 .hero p:not(.eyebrow) {
-	color: #d0d5dd;
-	font-size: clamp(1.15rem, 2vw, 1.4rem);
+	color: var(--accent-soft);
+	font-size: 1.2rem;
 	max-width: 680px;
 }
 
 .eyebrow {
-	color: #84adff;
+	color: #baf7c7;
 	font-size: 0.8rem;
 	font-weight: 700;
 	letter-spacing: 0.12em;
@@ -100,7 +120,7 @@ a {
 .button-link {
 	background: var(--accent);
 	border-radius: 999px;
-	color: #fff;
+	color: var(--surface);
 	display: inline-block;
 	font-weight: 700;
 	margin-top: 18px;
@@ -113,7 +133,32 @@ a {
 }
 
 .content-section h2 {
-	font-size: clamp(2rem, 5vw, 3.75rem);
-	letter-spacing: -0.04em;
+	font-size: 2.5rem;
+	letter-spacing: 0;
 	line-height: 1.08;
+}
+
+@media (min-width: 760px) {
+	.hero h1 {
+		font-size: 5rem;
+	}
+
+	.hero p:not(.eyebrow) {
+		font-size: 1.35rem;
+	}
+
+	.content-section h2 {
+		font-size: 3.5rem;
+	}
+}
+
+@media (max-width: 759px) {
+	.site-header__inner,
+	.site-footer__inner {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 12px;
+		justify-content: center;
+		padding-block: 16px;
+	}
 }

@@ -3,7 +3,14 @@
   "starter": "base",
   "version": "1.0",
   "themeFolder": "theme",
-  "pages": [],
+  "pages": [
+    {
+      "title": "Services",
+      "slug": "services",
+      "template": "page-services.php",
+      "status": "publish"
+    }
+  ],
   "requires": {
     "wordpress": ">=6.0",
     "plugins": []
