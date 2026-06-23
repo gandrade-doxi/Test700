@@ -84,6 +84,7 @@ a {
 	align-items: center;
 	display: flex;
 	gap: 20px;
+	flex-wrap: wrap;
 }
 
 .site-nav a {
@@ -197,6 +198,52 @@ a {
 	margin: 0;
 }
 
+.info-page {
+	margin-inline: auto;
+	max-width: 780px;
+	padding-block: clamp(48px, 8vw, 96px);
+}
+
+.info-header {
+	margin-bottom: 36px;
+}
+
+.info-header p:not(.eyebrow) {
+	color: var(--muted);
+	max-width: 620px;
+}
+
+.contact-list {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+}
+
+.contact-item {
+	align-items: center;
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	padding: 22px 24px;
+}
+
+.contact-item + .contact-item {
+	border-top: 1px solid var(--border);
+}
+
+.contact-item span {
+	color: var(--muted);
+	font-size: 0.95rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.contact-item strong {
+	color: var(--accent-dark);
+	font-size: 1.05rem;
+	text-align: right;
+}
+
 @media (min-width: 760px) {
 	.hero h1 {
 		font-size: 5rem;
@@ -224,6 +271,16 @@ a {
 
 	.services-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.contact-item {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	.contact-item strong {
+		text-align: left;
 	}
 }
 

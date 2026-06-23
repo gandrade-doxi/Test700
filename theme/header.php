@@ -23,6 +23,7 @@
 		</a>
 		<nav class="site-nav" aria-label="<?php esc_attr_e( 'Primary navigation', 'wp-vibecoder-starter' ); ?>">
 			<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'Services', 'wp-vibecoder-starter' ); ?></a>
+			<a href="<?php echo esc_url( home_url( '/info/' ) ); ?>"><?php esc_html_e( 'Info', 'wp-vibecoder-starter' ); ?></a>
 		</nav>
 	</div>
 </header>

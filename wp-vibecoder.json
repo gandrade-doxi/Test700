@@ -9,6 +9,12 @@
       "slug": "services",
       "template": "page-services.php",
       "status": "publish"
+    },
+    {
+      "title": "Info",
+      "slug": "info",
+      "template": "page-info.php",
+      "status": "publish"
     }
   ],
   "requires": {
